@@ -3,6 +3,6 @@ console.log(`Je m'appelle ${toto.myName} et j'étudie à ${toto.myCampus} de Lyo
 
 let cowsay = require("cowsay");
 console.log(cowsay.say({
-    text : "Je m'appelle Stef",
+    text : `Je m'appelle ${toto.myName} de la ${toto.myCampus}`,
 }));
 
