@@ -1,0 +1,22 @@
+<h1 [ngStyle]="{color:'red'}">Ma liste de produits</h1>
+
+<h2 [style.color]="'blue'">Prix à définir</h2>
+<ul >
+  <ng-container *ngFor="let i of listProduct">
+  <li *ngIf="!i.price">{{ i.name }} : {{ i.price }} euro</li>
+</ng-container>
+  </ul>
+
+  <h2 [style.color]="'blue'">Produits en promotion</h2>
+  <ul >
+    <ng-container *ngFor="let i of listProduct">
+  <li *ngIf="i.promo">{{ i.name }} : {{ i.promo }} %</li>
+</ng-container>
+  </ul>
+
+  <h2 [style.color]="'blue'">Autres produits</h2>
+  <ul>
+    <ng-container *ngFor="let i of listProduct">
+  <li *ngIf="i.price && !i.promo">{{ i.name }} : {{ i.price }} euros</li>
+</ng-container>
+</ul>
